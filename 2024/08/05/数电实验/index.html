@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
+  <link rel="icon" href="/img/avatar.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lhhjx">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="包含了头歌平台所有关卡代码以及实验报告，完成实验后利用文本编辑工具打开 example.circ 文件，将所有文字信息复制粘贴到 Educoder 平台代码区域，再点击评测按钮即可进行本关测试，平台会对你设计的电路进行自动测试，为方便测试，请勿修改子电路封装。 头歌实验1.七段显示译码器直接填入真值表即可   2.四位无符号数比较器利用“分析组合逻辑电路”，填写输出函数表达式，直接生成电路。 12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HUST-数电实验（含实验报告）">
+<meta property="og:url" content="http://example.com/2024/08/05/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="包含了头歌平台所有关卡代码以及实验报告，完成实验后利用文本编辑工具打开 example.circ 文件，将所有文字信息复制粘贴到 Educoder 平台代码区域，再点击评测按钮即可进行本关测试，平台会对你设计的电路进行自动测试，为方便测试，请勿修改子电路封装。 头歌实验1.七段显示译码器直接填入真值表即可   2.四位无符号数比较器利用“分析组合逻辑电路”，填写输出函数表达式，直接生成电路。 12">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/a5ad279e6c8f6ba0a431c4706a6c52992ee432a96a0d451e625b298ef9e709de.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/50cd8868930635cef1e3ec8fa8bb42dcb11b38170e23c249ad88684d29477ae8.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/23306d31f732548d4101bc73fd8e6cc157a56acf85e0dac53530a67860857257.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/7de283348d279b70d1395137e5d6b05751b0b24767b06298c13e6439e7434d34.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/1118e3ea16ab6b53a6f730b7eec613df6ed652bc414c01ede7b9eac09d7eb810.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/ed3af24932305a13de944e0168be670c451a5fe1dfd5ce2235a9363be5f22f8d.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/2757bba494ebbebc5c4e01d6f8d7e32803d0a2bc2e63ba9f3ca3f5345307fb75.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/c2821c511d38b2670c048f1df9d3dc0e0f0d01688018b883de76b55a4b448cc9.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/0c264382227c9e61c405874dea7c8625dbbf719d492933b83917ddc57f571e20.png">
+<meta property="og:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/1ae52562a72f43d766eeac1f61da7e53d5b5b0f80acd45bbf637303f82d3b29f.png">
+<meta property="article:published_time" content="2024-08-05T08:20:48.000Z">
+<meta property="article:modified_time" content="2024-08-05T17:06:17.399Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/a5ad279e6c8f6ba0a431c4706a6c52992ee432a96a0d451e625b298ef9e709de.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>HUST-数电实验（含实验报告） - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":"flase","follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>lhhjx-blogs</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/e1.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="HUST-数电实验（含实验报告）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        lhhjx
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-05 16:20" pubdate>
+          2024年8月5日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          28 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">HUST-数电实验（含实验报告）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>包含了头歌平台所有关卡代码以及实验报告，完成实验后利用文本编辑工具打开 example.circ 文件，将所有文字信息复制粘贴到 Educoder 平台代码区域，再点击评测按钮即可进行本关测试，平台会对你设计的电路进行自动测试，为方便测试，请勿修改子电路封装。</p>
+<h2 id="头歌实验"><a href="#头歌实验" class="headerlink" title="头歌实验"></a>头歌实验</h2><h3 id="1-七段显示译码器"><a href="#1-七段显示译码器" class="headerlink" title="1.七段显示译码器"></a>1.七段显示译码器</h3><p>直接填入真值表即可<br><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/a5ad279e6c8f6ba0a431c4706a6c52992ee432a96a0d451e625b298ef9e709de.png" srcset="/img/loading.gif" lazyload alt="图 1">  </p>
+<h3 id="2-四位无符号数比较器"><a href="#2-四位无符号数比较器" class="headerlink" title="2.四位无符号数比较器"></a>2.四位无符号数比较器</h3><p>利用“分析组合逻辑电路”，填写输出函数表达式，直接生成电路。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br>Great：X0 ~Y3 ~Y2 ~Y1 ~Y0 + X1 ~Y3 ~Y2 ~Y1 + X1 X0 ~Y3 ~Y2 ~Y0 + X2 ~Y3 ~Y2 + X2 X0 ~Y3 ~Y1 ~Y0 + X2 X1 ~Y3 ~Y1 + X2 X1 X0 ~Y3 ~Y0 + X3 ~Y3 + X3 X0 ~Y2 ~Y1 ~Y0 + X3 X1 ~Y2 ~Y1 + X3 X1 X0 ~Y2 ~Y0 + X3 X2 ~Y2 + X3 X2 X0 ~Y1 ~Y0 + X3 X2 X1 ~Y1 + X3 X2 X1 X0 ~Y0<br><br>Equal：~X3 ~X2 ~X1 ~X0 ~Y3 ~Y2 ~Y1 ~Y0 + ~X3 ~X2 ~X1 X0 ~Y3 ~Y2 ~Y1 Y0 + ~X3 ~X2 X1 ~X0 ~Y3 ~Y2 Y1 ~Y0 + ~X3 ~X2 X1 X0 ~Y3 ~Y2 Y1 Y0 + ~X3 X2 ~X1 ~X0 ~Y3 Y2 ~Y1 ~Y0 + ~X3 X2 ~X1 X0 ~Y3 Y2 ~Y1 Y0 + ~X3 X2 X1 ~X0 ~Y3 Y2 Y1 ~Y0 + ~X3 X2 X1 X0 ~Y3 Y2 Y1 Y0 + X3 ~X2 ~X1 ~X0 Y3 ~Y2 ~Y1 ~Y0 + X3 ~X2 ~X1 X0 Y3 ~Y2 ~Y1 Y0 + X3 ~X2 X1 ~X0 Y3 ~Y2 Y1 ~Y0 + X3 ~X2 X1 X0 Y3 ~Y2 Y1 Y0 + X3 X2 ~X1 ~X0 Y3 Y2 ~Y1 ~Y0 + X3 X2 ~X1 X0 Y3 Y2 ~Y1 Y0 + X3 X2 X1 ~X0 Y3 Y2 Y1 ~Y0 + X3 X2 X1 X0 Y3 Y2 Y1 Y0<br><br>Less：~X3 ~X2 ~X1 ~X0 Y0 + ~X3 ~X2 ~X1 Y1 + ~X3 ~X2 ~X0 Y1 Y0 + ~X3 ~X2 Y2 + ~X3 ~X1 ~X0 Y2 Y0 + ~X3 ~X1 Y2 Y1 + ~X3 ~X0 Y2 Y1 Y0 + ~X3 Y3 + ~X2 ~X1 ~X0 Y3 Y0 + ~X2 ~X1 Y3 Y1 + ~X2 ~X0 Y3 Y1 Y0 + ~X2 Y3 Y2 + ~X1 ~X0 Y3 Y2 Y0 + ~X1 Y3 Y2 Y1 + ~X0 Y3 Y2 Y1 Y0<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-八位无符号比较器"><a href="#3-八位无符号比较器" class="headerlink" title="3.八位无符号比较器"></a>3.八位无符号比较器</h3><p>按照图片上进行连接即可<br><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/50cd8868930635cef1e3ec8fa8bb42dcb11b38170e23c249ad88684d29477ae8.png" srcset="/img/loading.gif" lazyload alt="![alt text](image-1.png) 1"></p>
+<h3 id="4-一位二路选择器"><a href="#4-一位二路选择器" class="headerlink" title="4.一位二路选择器"></a>4.一位二路选择器</h3><p>按照图片上进行连接即可<br><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/23306d31f732548d4101bc73fd8e6cc157a56acf85e0dac53530a67860857257.png" srcset="/img/loading.gif" lazyload alt="图 0">  </p>
+<h3 id="5-八位二路选择器"><a href="#5-八位二路选择器" class="headerlink" title="5.八位二路选择器"></a>5.八位二路选择器</h3><p><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/7de283348d279b70d1395137e5d6b05751b0b24767b06298c13e6439e7434d34.png" srcset="/img/loading.gif" lazyload alt="图 3">  </p>
+<h3 id="6-模十可逆计数器激励函数"><a href="#6-模十可逆计数器激励函数" class="headerlink" title="6.模十可逆计数器激励函数"></a>6.模十可逆计数器激励函数</h3><p>先设计模十可逆计数器的状态图和状态表，得到D触发器的激励函数的真值表，利用“分析组合逻辑电路”，输入激励函数的表达式，直接生成电路。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">D3: ~y3 ~y2 ~y1 ~y0 Mode + ~y3 y2 y1 y0 ~Mode + y3 ~y2 ~y1 ~y0 ~Mode + y3 ~y2 ~y1 y0 Mode<br>D2: ~y3 ~y2 y1 y0 ~Mode + ~y3 y2 ~y1 ~Mode + ~y3 y2 y0 Mode + ~y3 y2 y1 ~y0 + y3 ~y2 ~y1 ~y0 Mode<br>D1: ~y3 ~y1 y0 ~Mode + ~y3 y1 ~y0 ~Mode + ~y3 y1 y0 Mode + ~y3 y2 ~y1 ~y0 Mode + y3 ~y2 ~y1 ~y0 Mode<br>D0： ~y3 ~y0 + ~y2 ~y1 ~y0<br></code></pre></td></tr></table></figure>
+
+<h3 id="7-模十可逆计数器输出函数"><a href="#7-模十可逆计数器输出函数" class="headerlink" title="7.模十可逆计数器输出函数"></a>7.模十可逆计数器输出函数</h3><p>可直接输入表达式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Cout:~S3 ~S2 ~S1 ~S0 Mode + S3 ~S2 ~S1 S0 ~Mode<br></code></pre></td></tr></table></figure>
+
+<p><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/1118e3ea16ab6b53a6f730b7eec613df6ed652bc414c01ede7b9eac09d7eb810.png" srcset="/img/loading.gif" lazyload alt="图 6">  </p>
+<h3 id="8-模十可逆计数器（可异步置位）"><a href="#8-模十可逆计数器（可异步置位）" class="headerlink" title="8.模十可逆计数器（可异步置位）"></a>8.模十可逆计数器（可异步置位）</h3><p>按照图片进行连接即可</p>
+<p><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/ed3af24932305a13de944e0168be670c451a5fe1dfd5ce2235a9363be5f22f8d.png" srcset="/img/loading.gif" lazyload alt="图 7">  </p>
+<h3 id="9-两位十进制可逆计数器"><a href="#9-两位十进制可逆计数器" class="headerlink" title="9.两位十进制可逆计数器"></a>9.两位十进制可逆计数器</h3><p><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/2757bba494ebbebc5c4e01d6f8d7e32803d0a2bc2e63ba9f3ca3f5345307fb75.png" srcset="/img/loading.gif" lazyload alt="图 8">  </p>
+<h3 id="10-交通灯控制器激励函数"><a href="#10-交通灯控制器激励函数" class="headerlink" title="10.交通灯控制器激励函数"></a>10.交通灯控制器激励函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">D2= ~y2 Online + ~y1 Online + ~y0 Online + ~y1 ~y0 ~MR SR + ~y2 y1 y0 SR T2 + y2 ~y1 ~y0 + y2 ~y1 ~T4 + y2 ~y1 ~MR SR<br>D1= ~y2 Online + ~y2 ~y0 H MR + ~y2 ~y1 y0 T1 + ~y1 y0 Online T4 + ~y2 y1 ~y0 + ~y2 y1 ~T2 + y1 ~y0 Online + y1 ~y0 H + ~y2 y1 H MR ~SR + y2 ~y1 y0 H MR T4<br>D0= ~y2 ~y1 ~H MR ~Online + ~y2 ~y1 y0 ~Online + ~y2 y0 ~Online ~T2 + ~y2 y0 ~H MR ~SR ~Online + ~y1 y0 ~H MR ~Online + ~y2 y1 ~y0 ~Online T1 + y2 ~y1 ~y0 T3 + y2 ~y1 y0 ~T4 + y2 y1 ~y0 ~H ~Online<br></code></pre></td></tr></table></figure>
+
+<p><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/c2821c511d38b2670c048f1df9d3dc0e0f0d01688018b883de76b55a4b448cc9.png" srcset="/img/loading.gif" lazyload alt="图 4">  </p>
+<h3 id="11-交通灯控制器输出函数"><a href="#11-交通灯控制器输出函数" class="headerlink" title="11.交通灯控制器输出函数"></a>11.交通灯控制器输出函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">R1=y2 ~y1 + y2 y0<br>Y1=~y2 ~y1 ~y0 + y1 y0<br>G1=~y2 ~y1 y0 + y1 ~y0<br>R2=~y2 y0 + y1<br>Y2=~y2 ~y1 ~y0 + y2 y0<br>G2=y2 ~y1 ~y0<br>PASS0=~y2 ~y1 ~y0<br>PASS1=~y2 y0 + ~y2 y1<br>PASS2=y2 ~y1<br>PASS3=y2 y1<br></code></pre></td></tr></table></figure>
+
+<p>也可填写真值表<br><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/0c264382227c9e61c405874dea7c8625dbbf719d492933b83917ddc57f571e20.png" srcset="/img/loading.gif" lazyload alt="图 5"></p>
+<h3 id="12-交通灯控制系统"><a href="#12-交通灯控制系统" class="headerlink" title="12.交通灯控制系统"></a>12.交通灯控制系统</h3><p><img src="/assets/img/%E6%95%B0%E7%94%B5%E5%AE%9E%E9%AA%8C/1ae52562a72f43d766eeac1f61da7e53d5b5b0f80acd45bbf637303f82d3b29f.png" srcset="/img/loading.gif" lazyload alt="图 9">  </p>
+<h2 id="实验报告部分内容"><a href="#实验报告部分内容" class="headerlink" title="实验报告部分内容"></a>实验报告部分内容</h2><p>需要完整实验报告的可以评论区联系我or email to <a href="mailto:&#108;&#x6a;&#x78;&#49;&#50;&#49;&#x35;&#49;&#x32;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#108;&#x6a;&#x78;&#49;&#50;&#49;&#x35;&#49;&#x32;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>实验源码 <a href="c:/Users/LJX12/Desktop/数电实验/实验源码/05_TrafficLight.circ">text</a></p>
+<p>看到这如果对你有帮助的话请对作者<a target="_blank" rel="noopener" href="https://github.com/lhhjx">https://github.com/lhhjx</a> 点个star再走吧：)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs bash">4.1实验总结<br>本次实验是一个涵盖了多个关键电路设计的综合性数字逻辑实验。通过设计、仿真、验证一系列电路模块，我深入掌握了数字电路系统的设计、仿真、调试以及电路模块的封装技术。在实验的第一部分，我着手设计了七路译码器和无符号比较器的设计，这个过程中，我详细了解了译码器的工作原理，它是如何将输入信号转换成具体的输出信号的，通过仔细分析输入与输出的关系，成功构建了一个能够准确根据输入选择对应输出线路的七路译码器。在设计无符号比较器的过程中，我首先设计了真值表，明确了每一位输入与输出之间的逻辑关系。随后，我利用逻辑门电路实现了这个比较器，它能够准确地比较两个无符号数的大小，并给出相应的输出结果。<br>在多路选择器的设计中，我学习了如何根据特定的选择信号，从多个输入信号中选择一个输出。通过仔细设计选择逻辑和输出逻辑，构建了一个稳定可靠的多路选择器，它能够根据不同的选择信号，准确地输出对应的输入信号。模十可逆计数器和二位模十可逆计数器的设计是本次实验的难点之一。首先分析了可逆计数器的工作原理，明确了正向和反向计数的切换逻辑以及计数达到特定值后的翻转逻辑。通过反复调试和优化，设计出了满足要求的可逆计数器，它们能够在正向和反向之间灵活切换，并在计数达到特定值后自动翻转。<br>在交通灯的设计部分，我分别进行了激励函数的设计和交通灯输出函数的设计。详细分析了交通灯的状态转换逻辑以后，我填写了真值表并根据真值表设计了相应的激励函数，这些函数能够准确地控制交通灯在不同状态之间的转换。接下来我根据交通灯的实际需求，设计了能够准确控制各个信号灯输出的函数。<br>最后，我将前面设计的各个模块整合在一起，构建了一个完整的交通灯控制系统。这个系统能够根据输入的控制信号，准确地控制交通灯的亮灭和状态转换，实现了对交通灯控制系统的正常运行。<br>总的来说，通过本次实验，我不仅掌握了数字电路设计的核心技能，还学会了如何将这些技能应用到实际的电路设计中。我相信这些经验将对我未来的学习和工作产生深远的影响。同时，我也深刻认识到电路设计和实现过程中需要注意的问题和细节的重要性，这将帮助我在日后的学习和工作中更好地规避风险、提高效率。<br>4.1.1遇到的问题及处理<br>1. 设计逻辑复杂性:<br>   问题: 在设计交通灯激励函数时，逻辑复杂度较高，尤其是根据状态转移填写对应的真值表时，常常有考虑不全面的地方导致得到的激励函数表达式出现错误。<br>   处理: 通过逐步调试和与同学的讨论，最终确立了每一个状态对应的转移情况，成功完成了真值表的填写。<br>2. 逻辑表达式错误:<br>   问题: 在设计无符号比较器的过程中，发现逻辑表达式有误，导致输出结果不正确。<br>   处理: 重新审视真值表，逐一校对逻辑表达式，确保每一个逻辑运算符和变量的正确性，最终得出正确的逻辑表达式。<br>3. 计数器无法自启动:<br>   问题: 在设计十进制可逆计数器时，起初没有考虑到可能会遇到计数器无法自启动的问题。<br>   处理: 在设计状态图时，特别注意将超过有效范围的状态，即超过1001的状态转移到初始状态（0000），并在激励函数设计时确保每个状态都有明确的下一状态。<br>4. 时钟信号同步问题:<br>   问题: 在交通灯控制系统设计中，发现在不同模块之间不一致，导致输出结果错误。<br>   处理: 统一时钟信号源，并在各模块之间同步时钟信号，确保时序逻辑一致性。<br>5.模块间信号不统一问题：<br>问题：在进行交通灯控制系统的设计时，出现了在不同模块之间状态不统一的情况。<br>处理：使用tunnel进行信号的传递。每完成一个小模块后进行仿真测试，确保每个模块独立正常工作，然后再进行模块组合，确保整体功能实现。<br>4.1.2设计方案存在的不足<br>1. 模块之间的接口设计不够完善:在模块组合时，接口设计不够通用，导致在信号传递过程中需要进行额外处理。后续设计中需要考虑模块化设计的接口标准化问题。<br>2. 仿真测试覆盖面不足:在进行仿真测试时，只覆盖了部分典型情况，未能全面覆盖所有边界条件。需要在后续设计中增加更多测试用例，确保设计的鲁棒性。<br>3. 电路优化不足:部分电路设计未进行充分优化，存在冗余逻辑和不必要的门电路。后续设计中可以通过逻辑优化和简化，减少电路的复杂度和面积。<br>4.2实验心得<br>在这次实验中，我深入学习了小型数字电路系统的设计、仿真和调试方法，以及电路模块的封装技术。实验涵盖了多个关键电路模块的设计，每一个模块都给我带来了不同的挑战和收获。<br>首先是七路译码器以及无符号比较器的设计。在这个过程中，我深刻理解了译码器的工作原理，它是如何将输入信号转换成具体的输出信号的。通过Logisim软件进行虚拟仿真，我逐步调整和优化了译码器的设计，确保其能够准确地根据输入选择对应的输出线路。这一过程不仅锻炼了我的逻辑思维能力，也加深了我对数字电路基础知识的理解。<br>接下来是多路选择器的设计。在这个环节中，我学会了如何根据特定的选择信号，从多个输入信号中选择一个输出。这要求我精确控制每一个逻辑门和信号线路，确保选择器能够在各种情况下都能正确工作。通过反复调试，我成功设计出了稳定可靠的多路选择器。<br>在模十可逆计数器和二位模十可逆计数器的设计中，这两个计数器需要在正向和反向计数之间灵活切换，而且要在达到特定的计数值后自动翻转。为了实现这一功能，我仔细分析了计数器的工作原理，并利用Logisim软件进行了大量的仿真测试。同时在利用一位模十可逆计数器进行二位模十可逆计数器的设计时，我对电路元件的串联以及并联后功能发生的变化有了更加深刻的认识，在设计时需要注意进位和借位问题，当个位正向计数到9或者反向计数到0时产生进位和借位，但十位的计数过程仅在个位有进位或者借位时才进行。最终，我成功设计出了满足要求的可逆计数器，这一过程中，我的电路设计能力和问题解决能力得到了显著提升。<br>交通灯的激励函数设计、输出函数设计以及控制系统的设计，是这次实验中最为复杂的部分。我需要综合考虑多个信号灯的状态转换和时序控制，确保交通灯能够按照预定的规则稳定运行。起初在设计交通灯的激励函数，也就是填写真值表的过程的，我对于状态的转移变化过程考虑的不够明确，导致经常出错误，在请教了老师和同学以后，我成功设计出来正确的真值表，得到了正确的激励函数表达式。在这个过程中，我不仅运用了之前学到的数字电路设计知识，还学会了如何将这些知识应用到实际场景中。我将任务拆分成不同的模块进行，将前面已经设计的电路元件利用起来，利用元件之间的相互作用，成功实现了各个功能，通过不断地调整和优化，我成功设计出了一个功能完善的交通灯控制系统。<br>总的来说，这次实验让我对数字电路设计有了更深入的理解和实践。通过完成七路译码器、无符号比较器、多路选择器、模十可逆计数器、二位模十可逆计数器以及交通灯控制系统的设计，我不仅提升了自己的电路设计能力，还学会了如何将理论知识应用到实际问题中。这些宝贵的经验将对我未来的学习和工作产生深远的影响。<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>HUST-数电实验（含实验报告）</div>
+      <div>http://example.com/2024/08/05/数电实验/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lhhjx</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/05/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
